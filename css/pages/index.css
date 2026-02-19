@@ -1,0 +1,116 @@
+/* -----------------------------------------------------------
+   [Page] Index 전용 스타일 (Optimized)
+   ----------------------------------------------------------- */
+
+/* 메인 배너 영역 */
+.index-hero {
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center; /* 이미지를 중앙으로 정렬 */
+    align-self: stretch;
+}
+
+.index-hero img {
+    width: 100%;
+    max-width: 353px; /* 고객센터/배너 박스와 폭을 맞춤 */
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* 섹션 타이틀 공통 (상단/중단 타이틀 통합 관리 가능) */
+.intro-title, .mid-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -0.22px;
+    color: var(--color-black);
+    min-height: 61px;
+}
+
+.intro-text-area { padding-top: 40px; gap: 5px; }
+.mid-title { margin: 40px 0 20px; width: 100%; }
+
+/* 서브 문구 */
+.intro-desc {
+    display: flex;
+    min-height: 61px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    text-align: center;
+    color: var(--color-gray-dark);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+/* 공통 카드 스타일 (이미지 배너 & 고객센터 박스) */
+.banner-item, .cs-box {
+    display: flex;
+    width: 100%;
+    max-width: 353px;
+    background: #FFF;
+    border-radius: var(--radius-default);
+    box-shadow: var(--shadow-basic);
+    box-sizing: border-box;
+}
+
+/* 이미지 배너 섹션 */
+.banner-section {
+    display: flex;
+    padding: 40px 10px 10px 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    align-self: stretch;
+}
+
+.banner-item {
+    height: 157px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 고객센터 섹션 */
+.cs-section {
+    padding: 20px 10px 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cs-box {
+    align-items: center;
+    min-height: 115px;
+    padding: 20px;
+    gap: 15px;
+}
+
+.cs-icon { width: 60px; height: 60px; flex-shrink: 0; }
+.cs-icon img { width: 100%; height: 100%; object-fit: contain; }
+
+.cs-info-group { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; /* 텍스트 왼쪽 정렬 추가 */
+}
+
+/* 고객센터 텍스트 스타일 */
+.cs-title, .cs-tel { font-size: 16px; font-weight: 700; line-height: 150%; }
+.cs-title { color: #000; }
+.cs-tel { color: var(--color-brand); }
+.cs-time { color: var(--color-gray-dark); font-size: 12px; font-weight: 500; line-height: 150%; }

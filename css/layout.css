@@ -1,0 +1,127 @@
+/* -----------------------------------------------------------
+   [Layout] 전체 레이아웃 및 헤더
+   ----------------------------------------------------------- */
+
+:root {
+    /* 폰트 관련 */
+    --font-main: "Noto Sans KR", sans-serif;
+    
+    /* 컬러 관련 */
+    --color-black: #1A1A1A;
+    --color-gray-dark: #555555;
+    --color-brand: #E2B93B;
+    
+    /* 공통 효과 */
+    --shadow-basic: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+    --radius-default: 10px;
+}
+
+body {
+    font-family: var(--font-main); /* 이제 하위 요소에서 생략 가능 */
+    color: var(--color-black);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 전체 페이지 래퍼 */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 480px; /* 모바일 최대 가로폭 가이드 */
+    margin: 0 auto;
+    background: #FFF;
+    min-height: 100vh;
+}
+
+/* 헤더 영역 */
+.main-header {
+    display: flex;
+    height: 48px; /* Figma: 48px */
+    align-items: center;
+    justify-content: space-between; /* 양 끝 정렬 */
+    align-self: stretch;
+    padding: 0 20px; /* Figma: 20px */
+    gap: 10px;
+    background: #FFF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 메인 컨텐츠 영역 */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 섹션 공통 여백 (헤더 이후 작업용) */
+.section {
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* -----------------------------------------------------------
+   [Layout] Footer 스타일
+   ----------------------------------------------------------- */
+
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    border-top: 1px solid #9D9D9D; /* Figma: Line-Gray2 */
+    background: #F9F9F9; /* Figma: Bg-Gray4 */
+    padding: 30px 20px; /* 내부 여백 확보 */
+}
+
+/* 이용약관 등 상단 링크 영역 */
+.footer-nav {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-nav a {
+    color: #555555; /* Figma: Font-Gray1 */
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
+    text-decoration: none;
+}
+
+/* 회사 정보 영역 */
+.footer-info {
+    color: #777777; /* Figma: Font-Gray2 */
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.footer-info p {
+    margin-bottom: 4px;
+}
+
+.footer-info .copyright {
+    margin-top: 10px;
+}
+
+/* 푸터 로고 영역 (흰색 배경 부분) */
+.footer-logo-area {
+    display: flex;
+    padding: 20px 0; /* padding 수치는 화면폭에 맞춰 조정 */
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    background: #FFF;
+}
+
+.footer-logo-area img {
+    height: 35px; /* 로고 이미지 크기에 맞춰 조정 */
+    width: auto;
+}
