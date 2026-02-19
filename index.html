@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages/index.css">
+    <script src="js/common.js" defer></script>
 </head>
 <body>
 
@@ -17,9 +18,58 @@
                 <a href="index.html"><img src="img/logo.png" alt="새별이앤씨"></a>
             </h1>
             <div class="header-title">새별이앤씨</div>
-            <button type="button" class="btn-menu">
-                <span></span><span></span><span></span> </button>
+            <div id="openIcon" class="toggle-btn" onclick="handleMenu(true)">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div id="closeIcon" class="close-mark" onclick="handleMenu(false)">✕</div>                
         </header>
+        <div id="menuOverlay" onclick="handleMenu(false)">
+            <nav id="sideNav" onclick="event.stopPropagation()">
+                <div class="user-section">
+                    <span>로그인</span> | <span>회원가입</span> | <span>아이디찾기</span>
+                </div>
+
+                <div class="menu-container">
+                    <div class="menu-group">
+                        <div class="depth1" onclick="handleAccordion(this)">구매하기 <span class="arrow">▼</span></div>
+                        <div class="depth2-wrap">
+                            <div class="depth2-item">제품 목록</div>
+                            <div class="depth2-item">구매하기 가이드</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-group">
+                        <div class="depth1" onclick="handleAccordion(this)">내 쿠폰함 <span class="arrow">▼</span></div>
+                        <div class="depth2-wrap">
+                            <div class="depth2-item">보유 쿠폰 내역</div>
+                            <div class="depth2-item">쿠폰 등록하기</div>
+                            <div class="depth2-item">지난 쿠폰 보기</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-group">
+                        <div class="depth1" onclick="handleAccordion(this)">이용안내 <span class="arrow">▼</span></div>
+                        <div class="depth2-wrap">
+                            <div class="depth2-item">공지사항</div>
+                            <div class="depth2-item">이용약관</div>
+                            <div class="depth2-item">개인정보 처리방침</div>
+                        </div>
+                    </div>
+
+                    <div class="menu-group">
+                        <div class="depth1" onclick="handleAccordion(this)">고객센터 <span class="arrow">▼</span></div>
+                        <div class="depth2-wrap">
+                            <div class="depth2-item">자주 묻는 질문 (FAQ)</div>
+                            <div class="depth2-item">1:1 온라인 상담</div>
+                            <div class="depth2-item">전화상담 안내</div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
 
         <main class="container">
             <section class="index-hero">

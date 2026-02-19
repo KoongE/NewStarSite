@@ -26,27 +26,70 @@
     letter-spacing: -0.5px;
 }
 
-/* 햄버거 메뉴 버튼 */
-.btn-menu {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 2px;
-}
+/* 상단바 (65px) */
+.logo { font-size: 20px; font-weight: 800; color: #333; letter-spacing: -1px; }
+.logo span { color: #e3b544; } /* 로고 골드 포인트 */
 
-/* 햄버거 선 스타일 (이미지 대신 CSS로 만들 경우) */
-.btn-menu span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    border-radius: 2px;
+/* 메뉴 토글버튼 */
+.toggle-btn { cursor: pointer; }
+.toggle-btn .line { display: block; width: 28px; height: 3px; background: #333; margin: 5px 0; border-radius: 2px; }
+.toggle-btn .line.gold { background: #e3b544; width: 18px; margin-left: auto; }
+
+.close-mark { font-size: 30px; font-weight: 300; color: #333; display: none; cursor: pointer; }
+
+/* 메뉴 배경 레이어 */
+#menuOverlay {
+    position: fixed; top: 65px; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; visibility: hidden;
+    transition: 0.3s; z-index: 10000;
 }
+#menuOverlay.is-open { opacity: 1; visibility: visible; }
+
+/* 메뉴바 본체 */
+#sideNav {
+    position: absolute; top: 0; right: -100%; 
+    width: 100%; background: #fff;
+    transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    max-height: 85vh; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+#menuOverlay.is-open #sideNav { right: 0; }
+
+/* 메뉴바 유저 정보 영역 */
+.user-section { 
+    padding: 25px 20px; background: #fcfcfc; border-bottom: 1px solid #f0f0f0;
+    display: flex; gap: 10px; font-size: 14px; color: #666;
+}
+.user-section span { cursor: pointer; transition: 0.2s; }
+.user-section span:hover { color: #e3b544; font-weight: bold; }
+
+/* 메뉴바 리스트 */
+.menu-group { border-bottom: 1px solid #f9f9f9; }
+.depth1 { 
+    padding: 20px; display: flex; justify-content: space-between; align-items: center;
+    font-size: 16px; font-weight: 500; color: #444; cursor: pointer;
+    transition: 0.3s;
+}
+.depth1 .arrow { font-size: 12px; color: #ccc; transition: 0.3s; }
+
+/* 메뉴바 서브메뉴 드롭다운 */
+.depth2-wrap { 
+    max-height: 0; overflow: hidden; background: #fafafa;
+    transition: max-height 0.4s ease-in-out; 
+}
+.depth2-item { 
+    padding: 15px 25px; font-size: 14px; color: #777; 
+    border-bottom: 1px solid #f0f0f0; cursor: pointer;
+}
+.depth2-item:hover { color: #e3b544; padding-left: 30px; transition: 0.3s; }
+
+/* 메뉴바 활성화 스타일 (이미지 템플릿 느낌 반영) */
+.menu-group.is-active { border-left: 4px solid #e3b544; }
+.menu-group.is-active .depth1 { color: #e3b544; font-weight: bold; background: #fffdf7; }
+.menu-group.is-active .arrow { transform: rotate(180deg); color: #e3b544; }
+.menu-group.is-active .depth2-wrap { max-height: 500px; }
 
 /* 상품 그리드 컨테이너 */
 .product-grid {
