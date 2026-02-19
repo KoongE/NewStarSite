@@ -16,45 +16,53 @@
     --radius-default: 10px;
 }
 
+/* 1. 기본 초기화 */
 body {
-    font-family: var(--font-main); /* 이제 하위 요소에서 생략 가능 */
+    background-color: #f1f1f1; /* 배경색을 주면 480px 영역이 돋보입니다 */
+    font-family: var(--font-main);
     color: var(--color-black);
-    -webkit-font-smoothing: antialiased;
-}
-
-/* 전체 페이지 래퍼 */
-.wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* 2. 레이아웃 컨테이너 */
+.wrapper {
     width: 100%;
-    max-width: 480px; /* 모바일 최대 가로폭 가이드 */
-    margin: 0 auto;
+    max-width: 480px; /* 현재 프로젝트 가이드 수치 */
     background: #FFF;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* 하위 fixed 요소의 기준점 역할 보조 */
 }
 
-/* 헤더 영역 */
+/* 3. 헤더 (이전 연습 코드의 fixed 방식 적용) */
 .main-header {
     display: flex;
-    height: 48px; /* Figma: 48px */
+    height: 48px; 
+    padding: 0 20px;
     align-items: center;
-    justify-content: space-between; /* 양 끝 정렬 */
-    align-self: stretch;
-    padding: 0 20px; /* Figma: 20px */
-    gap: 10px;
+    justify-content: space-between;
+    
     background: #FFF;
-    position: sticky;
+    position: fixed; /* sticky 대신 fixed 사용 */
     top: 0;
-    z-index: 1000;
+    width: 100%;
+    max-width: 480px; /* 중요: wrapper와 동일하게 맞춤 */
+    z-index: 10001;
+    border-bottom: 1px solid #f0f0f0;
+    box-sizing: border-box;
 }
 
-/* 메인 컨텐츠 영역 */
+/* 4. 컨테이너 (헤더가 fixed이므로 그만큼 여백을 줘야 함) */
 .container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* 헤더 높이가 48px이므로 본문이 가려지지 않게 여백 추가 */
+    padding-top: 48px; 
 }
 
 /* 섹션 공통 여백 (헤더 이후 작업용) */
