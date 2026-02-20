@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 완료 - 새별이앤씨</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/join.css">
+    <script src="js/common.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <h1 class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="새별이앤씨"></a>
+            </h1>
+            <div class="header-title">새별이앤씨</div>
+            <div id="openIcon" class="toggle-btn" onclick="handleMenu(true)">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div id="closeIcon" class="close-mark" onclick="handleMenu(false)">✕</div>                
+        </header>
+
+        <main class="container join-container">
+            <section class="join-title-area">
+                <h2 class="join-page-title">회원가입</h2>
+                <div class="title-underline"></div>
+            </section>
+
+            <section class="join-form-section">
+                <div class="join-form">
+                    
+                    <div class="join-steps">
+                        <div class="step">
+                            <span class="step-num">STEP 1</span>
+                            <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+                            <span class="step-txt">약관동의</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <span class="step-num">STEP 2</span>
+                            <div class="step-icon"><i class="fas fa-pen"></i></div>
+                            <span class="step-txt">정보입력</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step active">
+                            <span class="step-num">STEP 3</span>
+                            <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                            <span class="step-txt">가입완료</span>
+                        </div>
+                    </div>
+                    <div class="join-line"></div>
+                    <div class="join-result-box">
+                        <div class="end-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <div class="end-msg">
+                            <p>주식회사 새별이앤씨의<br><strong>회원가입이 완료되었습니다.</strong></p>
+                            <p class="sub-txt">새별이앤씨의 회원이 되신 것을 진심으로 환영합니다. 지금 바로 로그인하여 다양한 서비스를 이용해 보세요.</p>
+                        </div>
+                    </div>
+
+                    <a href="login.html" class="btn-join-complete">확인</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <nav class="footer-nav">
+                <a href="#">공지사항</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보 처리방침</a>
+            </nav>
+            <div class="footer-info">
+                <p>상호명 : 주식회사 새별이앤씨 | 대표이사 : 이재용</p>
+                <p>주소 : 경기도 고양시 덕양구 청초로 19, 2차 B동 706호</p>
+                <p>고객센터 : 02)6958-8829 | 사업자등록번호 : 454-87-03016</p>
+                <p>통신 판매업 신고 : 2025-고양덕양구-2430호</p>
+                <p>개인정보보호책임자 : 이재용</p>
+                <p class="copyright">© 2026 새별이앤씨 ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+        <div class="footer-logo-area">
+            <img src="img/footer-logo.png" alt="NS E&C Logo">
+        </div>
+    </div>
+</body>
+</html>

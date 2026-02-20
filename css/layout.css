@@ -3,16 +3,25 @@
    ----------------------------------------------------------- */
 
 :root {
-    /* 폰트 관련 */
+/* 폰트 관련 */
     --font-main: "Noto Sans KR", sans-serif;
     
     /* 컬러 관련 */
     --color-black: #1A1A1A;
     --color-gray-dark: #555555;
     --color-brand: #E2B93B;
+
+    /* 추가된 공통 컬러/효과 */
+    --color-bg-gray: #F7F7F7;      /* 약관 배경 등 */
+    --color-line-light: #EEEEEE;   /* 연한 구분선 */
+    --color-line-gray: #9D9D9D;    /* 인풋 테두리 */
+    --color-line-medium: #CCCCCC;  /* 비활성/체크박스 테두리 */
+    --color-text-light: #777777;   /* 유의사항 등 연한 글씨 */
+    --color-white: #FFFFFF;
     
     /* 공통 효과 */
     --shadow-basic: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+    --shadow-join: 0 0 10px 0 rgba(0, 0, 0, 0.20); /* 조금 더 진한 그림자 */
     --radius-default: 10px;
 }
 
@@ -31,10 +40,13 @@ body {
     width: 100%;
     max-width: 480px; /* 현재 프로젝트 가이드 수치 */
     background: #FFF;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     position: relative; /* 하위 fixed 요소의 기준점 역할 보조 */
+
+    /* [핵심 추가] 자식의 마진이 부모를 밀어내지 못하게 방어합니다 */
+    overflow: hidden;
 }
 
 /* 3. 헤더 (이전 연습 코드의 fixed 방식 적용) */
@@ -138,4 +150,16 @@ body {
 .footer-logo-area img {
     height: 35px; /* 로고 이미지 크기에 맞춰 조정 */
     width: auto;
+}
+
+/* 모든 텍스트형 input과 textarea에 포커스 효과 적용 */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none; /* 브라우저 기본 파란색 테두리 제거 */
+    border-color: var(--color-brand) !important; /* 골드 색상으로 변경 */
+    box-shadow: 0 0 5px rgba(226, 185, 59, 0.3); /* 은은한 골드 빛 광채 효과 추가 */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 부드러운 변화 */
 }

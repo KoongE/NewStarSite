@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 정보입력 - 새별이앤씨</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/join.css">
+    <script src="js/common.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <h1 class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="새별이앤씨"></a>
+            </h1>
+            <div class="header-title">새별이앤씨</div>
+            <div id="openIcon" class="toggle-btn" onclick="handleMenu(true)">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div id="closeIcon" class="close-mark" onclick="handleMenu(false)">✕</div>                
+        </header>
+
+        <main class="container join-container">
+            <section class="join-title-area">
+                <h2 class="join-page-title">회원가입</h2>
+                <div class="title-underline"></div>
+            </section>
+            <section class="join-form-section">
+                <form class="join-form join-write-form">
+                    
+                    <div class="join-steps">
+                        <div class="step">
+                            <span class="step-num">STEP 1</span>
+                            <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+                            <span class="step-txt">약관동의</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step active">
+                            <span class="step-num">STEP 2</span>
+                            <div class="step-icon"><i class="fas fa-pen"></i></div>
+                            <span class="step-txt">정보입력</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <span class="step-num">STEP 3</span>
+                            <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                            <span class="step-txt">가입완료</span>
+                        </div>
+                    </div>
+
+                    <h3 class="join-sub-title">회원 정보 입력</h3>
+
+                    <div class="input-container">
+                        <div class="write-row">
+                            <label class="input-label">이름</label>
+                            <input type="text" class="write-input" placeholder="이름 입력">
+                        </div>
+
+                        <div class="write-row">
+                            <label class="input-label">아이디</label>
+                            <div class="input-with-btn">
+                                <input type="text" class="write-input" placeholder="아이디 입력">
+                                <button type="button" class="side-btn">중복 검색</button>
+                            </div>
+                        </div>
+
+                        <div class="write-row">
+                            <label class="input-label">휴대폰 번호</label>
+                            <input type="tel" class="write-input" placeholder="'-' 제외하고 입력">
+                        </div>
+
+                        <div class="write-row">
+                            <label class="input-label">비밀번호</label>
+                            <input type="password" class="write-input" placeholder="비밀번호 입력">
+                        </div>
+
+                        <div class="write-row">
+                            <label class="input-label">비밀번호 확인</label>
+                            <input type="password" class="write-input" placeholder="비밀번호 재입력">
+                        </div>
+
+                        <div class="write-row">
+                            <label class="input-label">이메일</label>
+                            <input type="password" class="write-input" placeholder="이메일 입력">
+                            <p class="join-info-msg">※ 이메일 정보는 비밀번호 찾기 시 사용됩니다.
+                                <br/>※ 반드시 정확히 입력 바랍니다.
+                            </p>
+                        </div>
+
+                        <div class="write-row">
+                            <label class="input-label">[선택] 추천인 아이디</label>
+                            <input type="password" class="write-input" placeholder="비밀번호 재입력">
+                        </div>
+
+                        <div class="write-row">
+                            <label class="input-label">[선택] 주소</label>
+                            <div class="input-with-btn">
+                                <input type="text" class="write-input" placeholder="우편번호">
+                                <button type="button" class="side-btn">우편번호</button>
+                            </div>
+                            <input type="text" class="write-input mt-8" placeholder="기본 주소">
+                            <input type="text" class="write-input mt-8" placeholder="상세 주소 입력">
+                            <p class="join-info-msg">※ 지류상품권 구매 시 배송지 주소가 필요합니다.</p>
+                        </div>
+                        <div class="agree-row">
+                            <input type="checkbox" id="smsAgree" class="custom-check">
+                            <label for="smsAgree" class="receive-label">마케팅 정보 수신 동의 (선택)</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-join-submit">회원가입</button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <nav class="footer-nav">
+                <a href="#">공지사항</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보 처리방침</a>
+            </nav>
+            <div class="footer-info">
+                <p>상호명 : 주식회사 새별이앤씨 | 대표이사 : 이재용</p>
+                <p>주소 : 경기도 고양시 덕양구 청초로 19, 2차 B동 706호</p>
+                <p>고객센터 : 02)6958-8829 | 사업자등록번호 : 454-87-03016</p>
+                <p>통신 판매업 신고 : 2025-고양덕양구-2430호</p>
+                <p>개인정보보호책임자 : 이재용</p>
+                <p class="copyright">© 2026 새별이앤씨 ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+        <div class="footer-logo-area">
+            <img src="img/footer-logo.png" alt="NS E&C Logo">
+        </div>
+    </div>
+</body>
+</html>
