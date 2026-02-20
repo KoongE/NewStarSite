@@ -2,46 +2,7 @@
    [Page] Login 전용 스타일
    ----------------------------------------------------------- */
 
-/* 1. 컨테이너 수정: 
-   layout.css의 .container에 padding-top: 48px이 있으므로 
-   여기서는 추가적인 여백과 정렬만 신경 씁니다. */
-.login-container {
-    width: 100%;
-    padding: 100px 20px 40px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-/* 2-1, 2-2. 로그인 문구 및 밑줄 */
-.login-title-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px; /* 선과 글자 사이 간격 */
-    margin-bottom: 40px; /* 타이틀과 폼 박스 사이 간격 */
-    align-self: stretch;
-}
-
-.login-page-title {
-    color: #1A1A1A;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 700;
-    /* line-height를 1로 주어 불필요한 상하 여백 제거 */
-    line-height: 1; 
-    letter-spacing: -0.22px;
-    margin: 0;
-}
-
-.title-underline {
-    width: 40px;
-    height: 2px;
-    background: #E2B93B;
-}
-
-/* 3-1. 로그인 Form 박스 */
+   /* 3-1. 로그인 Form 박스 */
 .login-form-section {
     width: 100%;
     max-width: 353px; /* 인덱스 페이지 카드들과 폭을 맞춤 */
@@ -150,4 +111,155 @@
     color: #777;
     text-decoration: none;
     margin: 0 5px;
+}
+
+/* --- login_search 추가 스타일 --- */
+
+/* 2-1. login_search form */
+.search-form-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.search-form-box {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    border-radius: 20px;
+    border-top: 4px solid var(--color-brand);
+    background: var(--color-white);
+    box-shadow: var(--shadow-join);
+    box-sizing: border-box;
+}
+
+/* 2-2. 탭 레이아웃 */
+.search-tab-nav {
+    display: flex;
+    height: 57px;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    border-radius: 12px;
+    background: var(--color-white);
+}
+
+.search-tab {
+    display: flex;
+    padding: 5px 7px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-bottom: 1px solid var(--color-line-gray);
+    color: var(--color-text-light);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* 활성화된 탭 (아이디 찾기 기본값) */
+.search-tab.active {
+    border-bottom: 2px solid #BC9428; /* 가이드 Line-SC2 */
+    color: #BC9428;
+    font-weight: 700;
+}
+
+/* 입력 영역 보정 */
+.search-input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* 2-3-1. information 레이아웃 */
+.search-info-box {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: var(--color-bg-gray); /* #F7F7F7 */
+}
+
+/* 2-3-2. 안내사항 텍스트 */
+.info-title {
+    margin: 0; /* p 태그 기본 여백 제거 (핵심!) */
+    color: var(--color-black);
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+}
+.info-line {
+    width: 100%;           /* 박스 너비에 맞춤 */
+    height: 1px;           /* 선 두께 */
+    background-color: var(--color-text-light); /* #EEEEEE (layout.css 변수 활용) */
+    margin: 5px 0 10px 0;  /* 위로 5px(제목과의 간격), 아래로 10px(내용과의 간격) */
+}
+/* 2-3-3. "안내사항 목록" 컨테이너 */
+.info-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px; /* 목록 아이템 사이의 수직 간격 (이미지 느낌에 맞춰 4~6px 추천) */
+    align-self: stretch;
+}
+/* 2-3-4. "안내사항 목록" 개별 텍스트 */
+.info-item {
+    margin: 0; /* p 태그 기본 여백 제거 (핵심!) */
+    color: var(--color-text-light); /* #777 */
+    font-family: var(--font-main);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4; /* 줄바꿈 시 문장 간격 */
+    text-align: left;
+    word-break: keep-all; /* 단어 단위 줄바꿈으로 깔끔하게 */
+}
+
+/* 2-4. login_search form 버튼 */
+.btn-search-submit {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    background: var(--color-brand);
+    color: var(--color-white);
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 100%;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.btn-search-submit:hover {
+    filter: brightness(90%);
+}
+
+/* 유틸리티 */
+.title-underline {
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-brand);
+    margin: 8px auto 0;
 }

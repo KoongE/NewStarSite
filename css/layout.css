@@ -91,6 +91,45 @@ body {
 }
 
 /* -----------------------------------------------------------
+   [Layout] 서브페이지 레이아웃,문구,언더라인
+   ----------------------------------------------------------- */
+.page-container {
+    width: 100%;
+    padding: 100px 20px 40px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* 페이지 문구 및 밑줄 */
+.page-title-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px; /* 선과 글자 사이 간격 */
+    margin-bottom: 40px; /* 타이틀과 폼 박스 사이 간격 */
+    align-self: stretch;
+}
+
+.page-title {
+    color: #1A1A1A;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    /* line-height를 1로 주어 불필요한 상하 여백 제거 */
+    line-height: 1; 
+    letter-spacing: -0.22px;
+    margin: 0;
+}
+
+.page-underline {
+    width: 40px;
+    height: 2px;
+    background: #E2B93B;
+}
+
+/* -----------------------------------------------------------
    [Layout] Footer 스타일
    ----------------------------------------------------------- */
 
