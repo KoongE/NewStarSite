@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages/charge.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/common.js" defer></script>
+    <script src="js/pages/charge.js" defer></script>    
 </head>
 <body>
     <div class="wrapper">
@@ -38,7 +40,7 @@
 
                     <div class="charge-button-group">
                         <div class="charge-left-grid">
-                            <button type="button" class="btn-amount on">500,000원</button>
+                            <button type="button" class="btn-amount off">500,000원</button>
                             <button type="button" class="btn-amount off">300,000원</button>
                             <button type="button" class="btn-amount off">200,000원</button>
                             <button type="button" class="btn-amount off">100,000원</button>
@@ -58,11 +60,12 @@
 
                     <div class="charge-amount-input-group">
                         <span class="label-text">결제금액</span>
-                        <input type="text" class="input-amount" readonly value="500,000">
+                        <input type="text" class="input-amount" value="0">
+                        <input type="hidden" id="max-charge-amount" value="1000000"/>
                     </div>
 
                     <div class="charge-action-group">
-                        <button type="button" class="btn-action-off">초기화</button>
+                        <button type="button" id="amount-init" class="btn-action-off">초기화</button>
                         <button type="submit" class="btn-action-on">결제하기</button>
                     </div>
 
