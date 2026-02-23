@@ -1,0 +1,205 @@
+/* -----------------------------------------------------------
+   [Page] Buy 전용 스타일 (buy.css)
+   ----------------------------------------------------------- */
+
+.buy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+/* 0. buy form */
+.buy-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    align-self: stretch;
+    border-radius: 20px;
+    border-top: 4px solid var(--Brand-NSC, #E2B93B);
+    background: var(--Bg-Write, #FFF);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.20); /* login.css 참고 */
+}
+
+/* 1. brand layout */
+.brand-header {
+    display: flex;
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-img-box {
+    display: flex;
+    width: 159px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
+}
+
+.brand-img-box img { max-width: 100%; height: auto; }
+
+.brand-name {
+    color: var(--Font-Black, #1A1A1A);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.brand-sub-name {
+    color: var(--Font-Gray1, #555);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* 2. buy info & 6. brand detail 공통 스타일 (login_search 참고) */
+.buy-info-box, .brand-detail-box {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Bg-Gray3, #F7F7F7);
+}
+
+.info-title, .detail-title {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.info-line, .detail-line {
+    width: 100%;
+    height: 1px;
+    background: #CCC;
+}
+
+.info-list, .detail-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 5px;
+}
+
+.info-list li, .detail-list li {
+    color: var(--Font-Gray2, #777);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* 3. method button layout (2*2 Grid) */
+.buy-method-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.btn-method {
+    display: flex;
+    padding: 8px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #FFF;
+    border: 1px solid var(--Line-Gray2, #9D9D9D);
+}
+
+.btn-method.on {
+    border: 1px solid var(--Line-SC2, #BC9428);
+    background: var(--Brand-NSC, #E2B93B);
+}
+
+.m-title { font-size: 12px; font-weight: 500; }
+.m-price { font-size: 11px; margin-top: 2px; }
+
+.btn-method.on .m-title, .btn-method.on .m-price { color: #FFF; }
+.btn-method.off .m-title { color: #555; }
+.btn-method.off .m-price { color: var(--Brand-NSC, #E2B93B); }
+
+/* 4. buy amount layout (수량조절박스) */
+.buy-amount-container {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Bg-Gray3, #F5F5F5);
+}
+
+.amount-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.target-name { color: #333; font-size: 12px; font-weight: 500; }
+.btn-remove { background: none; border: none; font-size: 14px; color: #999; cursor: pointer; }
+
+.amount-control-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--Line-Gray2, #9D9D9D);
+    background: #FFF;
+}
+
+.counter-box button { background: none; border: none; font-size: 16px; width: 20px; cursor: pointer; }
+.input-count { width: 35px; border: none; text-align: center; font-size: 14px; font-weight: 700; }
+/* input 화살표 제거 */
+.input-count::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+.total-price-text { color: #000; font-size: 15px; font-weight: 700; }
+
+/* 5. buy action button layout */
+.buy-action-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-cart, .btn-buy {
+    flex: 1;
+    height: 48px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-cart {
+    border: 1px solid var(--Line-Gray2, #9D9D9D);
+    background: #FFF;
+    color: #555;
+}
+
+.btn-buy {
+    border: 1px solid var(--Line-SC2, #BC9428);
+    background: var(--Brand-NSC, #E2B93B);
+    color: #FFF;
+}
+
+/* 6-4. brand detail image */
+.detail-img-area {
+    width: 100%;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.detail-img-area img { width: 100%; height: auto; border-radius: 4px; }

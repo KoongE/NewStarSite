@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - 새별이앤씨</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/buy.css">
+    <script src="js/common.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <h1 class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="새별이앤씨"></a>
+            </h1>
+            <div class="header-title">새별이앤씨</div>
+            <div id="openIcon" class="toggle-btn" onclick="handleMenu(true)">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div id="closeIcon" class="close-mark" onclick="handleMenu(false)">✕</div>                
+        </header>
+
+        <main class="container page-container">
+            <section class="page-title-area">
+                <h2 class="page-title">구매하기</h2>
+                <div class="page-underline"></div>
+            </section>
+            <section class="buy-container">
+                <div class="buy-form">
+                    <div class="brand-header">
+                        <div class="brand-img-box">
+                            <img src="img/prod-booknlife.png" alt="북앤라이프">
+                        </div>
+                        <div>
+                            <h3 class="brand-name">북앤라이프 도서문화상품권</h3>
+                            <p class="brand-sub-name">온라인 전용 PIN</p>
+                        </div>
+                    </div>
+
+                    <div class="buy-info-box">
+                        <div class="info-title">구매 주의사항</div>
+                        <div class="info-line"></div>
+                        <ul class="info-list">
+                            <li>1. 구매(발송) 완료 후 교환/반품 및 환불이 불가능합니다.</li>
+                            <li>2. 유효기간은 구매일로부터 100일 이내</li>
+                            <li>3. 종이(실물) 상품이 아니며, 문자로 상품권 PIN 번호가 발송 됩니다.</li>
+                        </ul>
+                    </div>
+
+                    <div class="buy-method-grid">
+                        <button type="button" class="btn-method on">
+                            <span class="m-title">50,000원</span>
+                            <span class="m-price">(47,200원)</span>
+                        </button>
+                        <button type="button" class="btn-method off">
+                            <span class="m-title">30,000원</span>
+                            <span class="m-price">(28,200원)</span>
+                        </button>
+                        <button type="button" class="btn-method off">
+                            <span class="m-title">10,000원</span>
+                            <span class="m-price">(9,400원)</span>
+                        </button>
+                        <button type="button" class="btn-method off">
+                            <span class="m-title">5,000원</span>
+                            <span class="m-price">(4,700원)</span>
+                        </button>
+                    </div>
+
+                    <div class="buy-amount-container">
+                        <div class="amount-title-row">
+                            <span class="target-name">북앤라이프 도서문화상품권 50,000원권</span>
+                            <button type="button" class="btn-remove">✕</button>
+                        </div>
+                        <div class="amount-control-row">
+                            <div class="counter-box">
+                                <button type="button" class="btn-minus">−</button>
+                                <input type="number" class="input-count" value="1" min="1">
+                                <button type="button" class="btn-plus">+</button>
+                            </div>
+                            <div class="total-price-text">47,200원</div>
+                        </div>
+                    </div>
+
+                    <div class="buy-action-group">
+                        <button type="button" class="btn-cart">장바구니</button>
+                        <button type="button" class="btn-buy">구매하기</button>
+                    </div>
+
+                    <div class="brand-detail-box">
+                        <div class="detail-title">상품정보</div>
+                        <div class="detail-line"></div>
+                        <ul class="detail-list">
+                            <li>1. 발행업체 : (주)페이즈북앤라이프</li>
+                            <li>2. 고객센터 : 1544-5111</li>
+                            <li>3. 상품권 번호 형식 : 숫자16자리 + 비밀번호 숫자4자리 ex) 1234-5678-1234-5678 1234</li>
+                        </ul>
+                        <div class="detail-img-area">
+                            <img src="img/prod_detail_info.png" alt="상품상세정보">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <nav class="footer-nav">
+                <a href="#">공지사항</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보 처리방침</a>
+            </nav>
+            <div class="footer-info">
+                <p>상호명 : 주식회사 새별이앤씨 | 대표이사 : 이재용</p>
+                <p>주소 : 경기도 고양시 덕양구 청초로 19, 2차 B동 706호</p>
+                <p>고객센터 : 02)6958-8829 | 사업자등록번호 : 454-87-03016</p>
+                <p>통신 판매업 신고 : 2025-고양덕양구-2430호</p>
+                <p>개인정보보호책임자 : 이재용</p>
+                <p class="copyright">© 2026 새별이앤씨 ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+        <div class="footer-logo-area">
+            <img src="img/footer-logo.png" alt="NS E&C Logo">
+        </div>
+    </div>
+
+</body>
+</html>

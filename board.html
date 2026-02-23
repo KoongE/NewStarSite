@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - 새별이앤씨</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/board.css">
+    <script src="js/common.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <h1 class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="새별이앤씨"></a>
+            </h1>
+            <div class="header-title">새별이앤씨</div>
+            <div id="openIcon" class="toggle-btn" onclick="handleMenu(true)">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div id="closeIcon" class="close-mark" onclick="handleMenu(false)">✕</div>                
+        </header>
+
+        <main class="container page-container">
+            <section class="page-title-area">
+                <h2 class="page-title">게시판</h2>
+                <div class="page-underline"></div>
+            </section>
+
+            <section class="board-container">
+                <form class="board-search-form">
+                    <div class="search-select-wrapper">
+                        <select class="board-search-select">
+                            <option value="title">제목</option>
+                        </select>
+                    </div>
+                    <input type="text" class="board-search-input" placeholder="검색어를 입력하세요.">
+                    <button type="submit" class="board-search-btn">검색</button>
+                </form>
+
+                <div class="board-list-info">
+                    Total 150건, 3페이지
+                </div>
+
+                <div class="board-list-wrapper">
+                    <div class="board-list-header">
+                        <div class="col-no">No</div>
+                        <div class="col-subject">제목</div>
+                        <div class="col-date">등록일</div>
+                    </div>
+
+                    <div class="board-list-row">
+                        <div class="col-no"><span class="badge-notice">공지</span></div>
+                        <div class="col-subject"><a href="#">상품권 사용 여부 조회 기능 추가</a></div>
+                        <div class="col-date">2026.01.30</div>
+                    </div>
+                    <div class="board-list-row">
+                        <div class="col-no"><span class="badge-notice">공지</span></div>
+                        <div class="col-subject"><a href="#">2026.01.23일 시스템 점검안내</a></div>
+                        <div class="col-date">2026.01.10</div>
+                    </div>
+                    <div class="board-list-row">
+                        <div class="col-no">123</div>
+                        <div class="col-subject"><a href="#">휴대폰 본인인증 PASS 인증 점검 안내</a></div>
+                        <div class="col-date">2026.01.30</div>
+                    </div>
+                </div>
+
+                <div class="board-paging-form">
+                    <a href="#" class="paging-box">&lt;</a>
+                    <a href="#" class="paging-box active">1</a>
+                    <a href="#" class="paging-box">2</a>
+                    <a href="#" class="paging-box">3</a>
+                    <a href="#" class="paging-box">4</a>
+                    <a href="#" class="paging-box">5</a>
+                    <a href="#" class="paging-box">&gt;</a>
+                </div>
+            </section>
+
+        </main>
+        <footer class="main-footer">
+            <nav class="footer-nav">
+                <a href="#">공지사항</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보 처리방침</a>
+            </nav>
+            <div class="footer-info">
+                <p>상호명 : 주식회사 새별이앤씨 | 대표이사 : 이재용</p>
+                <p>주소 : 경기도 고양시 덕양구 청초로 19, 2차 B동 706호</p>
+                <p>고객센터 : 02)6958-8829 | 사업자등록번호 : 454-87-03016</p>
+                <p>통신 판매업 신고 : 2025-고양덕양구-2430호</p>
+                <p>개인정보보호책임자 : 이재용</p>
+                <p class="copyright">© 2026 새별이앤씨 ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+        <div class="footer-logo-area">
+            <img src="img/footer-logo.png" alt="NS E&C Logo">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - 새별이앤씨</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/charge.css">
+    <script src="js/common.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <h1 class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="새별이앤씨"></a>
+            </h1>
+            <div class="header-title">새별이앤씨</div>
+            <div id="openIcon" class="toggle-btn" onclick="handleMenu(true)">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div id="closeIcon" class="close-mark" onclick="handleMenu(false)">✕</div>                
+        </header>
+
+        <main class="container page-container">
+            <section class="page-title-area">
+                <h2 class="page-title">충전하기</h2>
+                <div class="page-underline"></div>
+            </section>
+            <section class="charge-container">
+                <form class="charge-form">
+                    <div class="charge-info-text">
+                        ※ 공지 : KT, LG 결제한도 10만원 (최근KT 이슈)
+                    </div>
+
+                    <div class="charge-button-group">
+                        <div class="charge-left-grid">
+                            <button type="button" class="btn-amount on">500,000원</button>
+                            <button type="button" class="btn-amount off">300,000원</button>
+                            <button type="button" class="btn-amount off">200,000원</button>
+                            <button type="button" class="btn-amount off">100,000원</button>
+                            <button type="button" class="btn-amount off">50,000원</button>
+                            <button type="button" class="btn-amount off">10,000원</button>
+                        </div>
+
+                        <div class="charge-right-group">
+                            <button type="button" class="btn-method on">
+                                휴대폰(다날)<span>(수수료 9%)</span>
+                            </button>
+                            <button type="button" class="btn-method off">
+                                휴대폰(헥토)<span>(수수료 9%)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="charge-amount-input-group">
+                        <span class="label-text">결제금액</span>
+                        <input type="text" class="input-amount" readonly value="500,000">
+                    </div>
+
+                    <div class="charge-action-group">
+                        <button type="button" class="btn-action-off">초기화</button>
+                        <button type="submit" class="btn-action-on">결제하기</button>
+                    </div>
+
+                    <div class="charge-notice-box">
+                        <div class="notice-header">결제 주의사항</div>
+                        <div class="notice-line"></div>
+                        <ul class="notice-list">
+                            <li>1. “포인트”는 당사가 제공하는 결제수단으로만 충전할 수 있습니다.</li>
+                            <li>2. 충전 가능금액은 최소 1,000원입니다.</li>
+                            <li>3. 결제수단이 “휴대폰소액결제”인 경우</li>
+                            <li class="sub-item">가. 만 19세이상 개인 또는 법인가입자를 대상으로 합니다.</li>
+                            <li class="sub-item">나. 본인 명의의 휴대폰으로만 충전할 수 있습니다.</li>
+                            <li class="sub-item">다. 결제금액은 익월 휴대폰 소액결제 항목으로 휴대폰 요금에 부과됩니다.</li>
+                            <li class="sub-item">라. 결제취소는 당월 결제 건에 대하여만 취소가 가능합니다. (익월취소 불가)</li>
+                        </ul>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <nav class="footer-nav">
+                <a href="#">공지사항</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보 처리방침</a>
+            </nav>
+            <div class="footer-info">
+                <p>상호명 : 주식회사 새별이앤씨 | 대표이사 : 이재용</p>
+                <p>주소 : 경기도 고양시 덕양구 청초로 19, 2차 B동 706호</p>
+                <p>고객센터 : 02)6958-8829 | 사업자등록번호 : 454-87-03016</p>
+                <p>통신 판매업 신고 : 2025-고양덕양구-2430호</p>
+                <p>개인정보보호책임자 : 이재용</p>
+                <p class="copyright">© 2026 새별이앤씨 ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+        <div class="footer-logo-area">
+            <img src="img/footer-logo.png" alt="NS E&C Logo">
+        </div>
+    </div>
+
+</body>
+</html>
