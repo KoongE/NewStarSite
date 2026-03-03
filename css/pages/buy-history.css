@@ -1,0 +1,196 @@
+/* -----------------------------------------------------------
+   [Page] Buy-History 전용 스타일
+   ----------------------------------------------------------- */
+
+/* 0. buy-history form */
+.buy-history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 중앙 정렬 유지 */
+    width: 100%;
+    padding: 20px 0;
+    gap: 10px;
+}
+
+/* 1. brand-button-form (탭 가로 스크롤 대응) */
+.brand-button-form {
+    display: flex;
+    height: 38px;
+    width: 353px;
+    justify-content: flex-start; /* 스크롤을 위해 시작점 정렬 */
+    align-items: center;
+    overflow-x: auto; /* 가로 스크롤 활성화 */
+    white-space: nowrap;
+    -ms-overflow-style: none; /* IE 스크롤바 숨기기 */
+    scrollbar-width: none;  /* 파이어폭스 스크롤바 숨기기 */
+}
+.brand-button-form::-webkit-scrollbar { display: none; } /* 크롬 스크롤바 숨기기 */
+
+.button-group {
+    display: flex;
+    height: 38px;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-button {
+    display: flex;
+    padding: 5px 15px; /* 텍스트 길이에 대응하도록 패딩 조절 */
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid var(--Line-SC2, #BC9428);
+    background: #FFF; /* 기본은 흰색 */
+    color: var(--Line-SC2, #BC9428);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.brand-button.active {
+    background: var(--Brand-NSC, #E2B93B);
+    color: #FFF;
+}
+
+/* 2, 3. 검색 영역 수정 (2단 배치 패턴) */
+.buy-history-search-form {
+    display: flex;
+    flex-direction: column; /* 세로로 나열 */
+    width: 353px;
+    gap: 10px;
+    height: auto; /* 높이 고정 해제 */
+}
+
+/* 날짜 입력부 */
+.search-date-group {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-date-input {
+    flex: 1; /* 인풋이 남은 공간을 꽉 채우도록 수정 */
+    height: 39px;
+    border-radius: 4px;
+    border: 1px solid var(--Line-Gray2, #9D9D9D);
+    padding: 0 10px;
+    font-size: 14px; /* 가독성을 위해 폰트 크기 소폭 상승 */
+    background: #FFF;
+    /* 기본 달력 아이콘 크기 조절을 위해 추가 */
+    -webkit-appearance: none;
+}
+
+/* 버튼 그룹부 */
+.search-btn-group {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+}
+
+.btn-search-action, .btn-excel-action {
+    flex: 1; /* 버튼도 반반씩 차지 */
+    height: 39px;
+    border-radius: 4px;
+    border: none;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-search-action { background: var(--Brand-NSC, #E2B93B); }
+.btn-excel-action { background: #D9BB4D; } /* 엑셀 버튼 구분색 */
+
+/* 4. 카운트 텍스트 */
+.buy-history-count {
+    width: 353px;
+    padding-top: 10px;
+    color: #777;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* 5. 구매 아이템 카드 */
+.buy-history-item {
+    display: flex;
+    width: 353px;
+    padding: 0 0 10px 0; /* 상단 패딩 제거(헤더가 채움) */
+    flex-direction: column;
+    border-radius: 20px;
+    border-top: 4px solid var(--Brand-NSC, #E2B93B);
+    background: var(--Bg-Write, #FFF);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.20);
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.item-header {
+    display: flex;
+    height: 42px;
+    padding: 5px 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--Line-Gray2, #9D9D9D);
+    background: var(--Bg-Gray3, #F5F5F5);
+}
+
+.header-no, .header-date {
+    color: var(--Font-Gray1, #555);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.item-row-group {
+    display: flex;
+    padding: 8px 15px 0 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-label {
+    color: var(--Line-Gray2, #9D9D9D);
+    font-size: 12px;
+    font-weight: 700;
+    width: 60px;
+}
+
+.row-value {
+    color: var(--Font-Gray1, #555);
+    font-size: 12px;
+    font-weight: 500;
+    text-align: right;
+}
+
+/* 6. 페이징 */
+.buy-history-paging {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+    gap: 5px;
+    align-self: stretch;
+}
+
+.paging-box {
+    display: flex;
+    width: 28px;
+    height: 28px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid var(--Line-Gray2, #9D9D9D);
+    background: #FFF;
+    text-decoration: none;
+    color: var(--Font-Gray1, #555);
+    font-size: 13px;
+}
+
+.paging-box.active {
+    background: var(--Brand-NSC, #E2B93B);
+    color: #FFF;
+    border-color: var(--Brand-NSC, #E2B93B);
+}

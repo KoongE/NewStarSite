@@ -30,7 +30,6 @@
     border-radius: 4px;
     border: 1px solid var(--Line-Gray2, #9D9D9D);
     background: #FFF;
-    font-family: "Noto Sans KR";
     font-size: 14px;
     font-weight: 500;
 }
@@ -58,7 +57,6 @@
     background: var(--Brand-NSC, #E2B93B);
     border: none;
     color: #FFF;
-    font-family: "Noto Sans KR";
     font-size: 15px;
     font-weight: 700;
     white-space: nowrap; /* 텍스트 줄바꿈 방지 강제 */
@@ -69,7 +67,6 @@
 .board-list-info {
     align-self: stretch;
     color: #777;
-    font-family: "Noto Sans KR";
     font-size: 14px;
     font-weight: 400;
 }

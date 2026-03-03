@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - 새별이앤씨</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/cart.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/pages/cart.js" defer></script>    
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <h1 class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="새별이앤씨"></a>
+            </h1>
+            <div class="header-title">새별이앤씨</div>
+            <div id="openIcon" class="toggle-btn" onclick="handleMenu(true)">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div id="closeIcon" class="close-mark" onclick="handleMenu(false)">✕</div>                
+        </header>
+
+<main class="container page-container">
+    <section class="page-title-area">
+        <h2 class="page-title">장바구니</h2>
+        <div class="page-underline"></div>
+    </section>
+
+    <div class="cart-container">
+        <section class="cart-form">
+            
+            <div class="cart-action-layout">
+                <button type="button" class="btn-cart-util">선택삭제</button>
+                <button type="button" class="btn-cart-util">비우기</button>
+            </div>
+
+            <div class="cart-item-list">
+                
+                <div class="cart-buy-item">
+                    <input type="checkbox" class="cart-check">
+                    
+                    <div class="buy-amount-container">
+                        <div class="amount-title-row">
+                            <span class="target-name">북앤라이프 도서문화상품권 50,000원권</span>
+                            <button type="button" class="btn-remove">✕</button>
+                            <input type="hidden" class="product-code" value="A1001"/>
+                            <input type="hidden" class="max-buy-count" value="20"/>
+                        </div>
+                        <div class="amount-control-row">
+                            <div class="counter-box">
+                                <button type="button" class="btn-minus">−</button>
+                                <input type="number" class="input-count" value="1" min="1">
+                                <button type="button" class="btn-plus">+</button>
+                            </div>
+                            <div class="total-price-text">47,200원</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-buy-item">
+                    <input type="checkbox" class="cart-check">
+                    <div class="buy-amount-container">
+                        <div class="amount-title-row">
+                            <span class="target-name">별풍선교환권 500개</span>
+                            <button type="button" class="btn-remove">✕</button>
+                            <input type="hidden" class="product-code" value="B1001"/>
+                            <input type="hidden" class="max-buy-count" value="10"/>
+                        </div>
+                        <div class="amount-control-row">
+                            <div class="counter-box">
+                                <button type="button" class="btn-minus">−</button>
+                                <input type="number" class="input-count" value="1" min="1">
+                                <button type="button" class="btn-plus">+</button>
+                            </div>
+                            <div class="total-price-text">52,250원</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="buy-action-layout">
+                <button type="button" class="btn-home-back" onclick="location.href='index.html'">쇼핑하기</button>
+                <button type="button" class="btn-buy-submit">구매하기</button>
+            </div>
+        </section>
+    </div>
+</main>
+
+        <footer class="main-footer">
+            <nav class="footer-nav">
+                <a href="#">공지사항</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보 처리방침</a>
+            </nav>
+            <div class="footer-info">
+                <p>상호명 : 주식회사 새별이앤씨 | 대표이사 : 이재용</p>
+                <p>주소 : 경기도 고양시 덕양구 청초로 19, 2차 B동 706호</p>
+                <p>고객센터 : 02)6958-8829 | 사업자등록번호 : 454-87-03016</p>
+                <p>통신 판매업 신고 : 2025-고양덕양구-2430호</p>
+                <p>개인정보보호책임자 : 이재용</p>
+                <p class="copyright">© 2026 새별이앤씨 ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+        <div class="footer-logo-area">
+            <img src="img/footer-logo.png" alt="NS E&C Logo">
+        </div>
+    </div>
+
+</body>
+</html>

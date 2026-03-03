@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - 새별이앤씨</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/buy-detail.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <h1 class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="새별이앤씨"></a>
+            </h1>
+            <div class="header-title">새별이앤씨</div>
+            <div id="openIcon" class="toggle-btn" onclick="handleMenu(true)">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div id="closeIcon" class="close-mark" onclick="handleMenu(false)">✕</div>                
+        </header>
+
+        <main class="container page-container">
+            <section class="page-title-area">
+                <h2 class="page-title">구매 상세 내역</h2>
+                <div class="page-underline"></div>
+            </section>
+
+            <div class="buy-detail-container">
+                <div class="buy-detail-group">
+                    <span class="summary-text">주문번호 : 15779</span>
+                </div>
+
+                <div class="buy-brand-detail">
+                    <div class="buy-brand-header">
+                        <span class="brand-title">온라인도서문화상품권</span>
+                    </div>
+                    <div class="buy-brand-row-group">
+                        <img src="img/prod-booknlife.png" alt="브랜드이미지" class="brand-image">
+                        <div class="brand-info-text">
+                            북앤라이프 도서문화상품권<br>
+                            50,000원권
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buy-voucher-count">
+                    총 구매수량 : 2개
+                </div>
+
+                <div class="buy-voucher-list">
+                    <div class="list-header">
+                        <span class="col-no">No.</span>
+                        <span class="col-pin">핀번호 / 인증번호</span>
+                        <span class="col-status">상태</span>
+                    </div>
+                    <div class="list-row-group">
+                        <span class="col-no">1</span>
+                        <span class="col-pin">1234-5678-9012-3456 / 123456</span>
+                        <span class="col-status">발급완료</span>
+                    </div>
+                    <div class="list-row-group">
+                        <span class="col-no">2</span>
+                        <span class="col-pin">9876-5432-1098-7654 / 654321</span>
+                        <span class="col-status">발급완료</span>
+                    </div>
+                </div>
+
+                <div class="buy-detail-action-group">
+                    <button type="button" class="btn-detail-back" onclick="history.back();">
+                        <span>뒤로가기</span>
+                    </button>
+                    <button type="button" class="btn-detail-excel">
+                        <span>엑셀다운로드</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <nav class="footer-nav">
+                <a href="#">공지사항</a>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보 처리방침</a>
+            </nav>
+            <div class="footer-info">
+                <p>상호명 : 주식회사 새별이앤씨 | 대표이사 : 이재용</p>
+                <p>주소 : 경기도 고양시 덕양구 청초로 19, 2차 B동 706호</p>
+                <p>고객센터 : 02)6958-8829 | 사업자등록번호 : 454-87-03016</p>
+                <p>통신 판매업 신고 : 2025-고양덕양구-2430호</p>
+                <p>개인정보보호책임자 : 이재용</p>
+                <p class="copyright">© 2026 새별이앤씨 ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+        <div class="footer-logo-area">
+            <img src="img/footer-logo.png" alt="NS E&C Logo">
+        </div>
+    </div>
+
+</body>
+</html>

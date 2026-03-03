@@ -1,0 +1,28 @@
+/* 이 정도만 넣어도 레이아웃 깨짐 없이 안전합니다! */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 레이아웃 계산의 핵심 */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}

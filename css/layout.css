@@ -25,6 +25,11 @@
     --radius-default: 10px;
 }
 
+/* layout.css 또는 reset.css 상단 */
+body, input, button, textarea, select {
+    font-family: var(--font-main);
+}
+
 /* 1. 기본 초기화 */
 body {
     background-color: #f1f1f1; /* 배경색을 주면 480px 영역이 돋보입니다 */
@@ -108,7 +113,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 4px; /* 선과 글자 사이 간격 */
-    margin-bottom: 40px; /* 타이틀과 폼 박스 사이 간격 */
+    margin-bottom: 20px; /* 타이틀과 폼 박스 사이 간격 */
     align-self: stretch;
 }
 

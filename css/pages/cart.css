@@ -1,0 +1,176 @@
+/* -----------------------------------------------------------
+   [Page] Cart - 최적화 스타일
+   ----------------------------------------------------------- */
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+/* 0. cart form (사용자 수정본 반영) */
+.cart-form {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    align-self: stretch;
+    border-radius: 20px;
+    border-top: 4px solid var(--Brand-NSC, #E2B93B);
+    background: var(--Bg-Write, #FFF);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.20);
+    box-sizing: border-box; /* 패딩 충돌 방지 핵심 */
+}
+
+/* 1-1. 상단 액션 버튼 */
+.cart-action-layout {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.btn-cart-util {
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid var(--Line-Gray2, #9D9D9D);
+    background: #FFF;
+    font-size: 12px;
+    color: var(--Font-Gray1, #555);
+    cursor: pointer;
+}
+
+/* 1-2. 상품 리스트 구성 */
+.cart-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.cart-buy-item {
+    display: flex;
+    align-items: center; /* 체크박스와 상품박스 세로 중앙 정렬 */
+    gap: 10px;
+    width: 100%;
+}
+
+.cart-check {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* 4. buy amount layout (전달주신 CSS 반영) */
+.buy-amount-container {
+    display: flex;
+    flex: 1; /* 남은 가로 공간 차지 */
+    min-width: 0; /* 내부 텍스트 잘림 방지 */
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Bg-Gray3, #F5F5F5);
+}
+
+.amount-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.target-name { 
+    color: #333; 
+    font-size: 12px; 
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.btn-remove { 
+    background: none; 
+    border: none; 
+    font-size: 14px; 
+    color: #999; 
+    cursor: pointer; 
+}
+
+.amount-control-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--Line-Gray2, #9D9D9D);
+    background: #FFF;
+}
+
+.counter-box button { background: none; border: none; font-size: 16px; width: 20px; cursor: pointer; }
+.input-count { 
+    width: 35px; 
+    border: none; 
+    text-align: center; 
+    font-size: 14px; 
+    font-weight: 700; 
+    outline: none;
+}
+.input-count::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+.total-price-text { color: #000; font-size: 15px; font-weight: 700; }
+
+/* 1-3. 하단 구매 버튼 */
+.buy-action-layout {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.btn-home-back, .btn-buy-submit {
+    flex: 1;
+    height: 44px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-home-back {
+    border: 1px solid var(--Line-Gray2, #9D9D9D);
+    background: #FFF;
+    color: #555;
+}
+
+.btn-buy-submit {
+    border: 1px solid #BC9428;
+    background: var(--Brand-NSC, #E2B93B);
+    color: #FFF;
+}
+
+/* 장바구니 비었을 때 표시되는 영역 */
+.buy-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: var(--Bg-Gray3, #F5F5F5);
+    color: #999;
+    font-size: 14px;
+    border: 1px dashed #CCC;
+    margin: 10px 0;
+}

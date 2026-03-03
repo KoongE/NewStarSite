@@ -1,0 +1,184 @@
+/* -----------------------------------------------------------
+   [Page] Buy-Detail 전용 스타일
+   ----------------------------------------------------------- */
+
+.buy-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    gap: 15px; /* 가이드 gap 10~15px 조절 */
+}
+
+/* 1. 상단 주문 요약 그룹 */
+.buy-detail-group {
+    display: flex;
+    width: 353px;
+    height: 50px;
+    padding: 10px 20px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Bg-Gray3, #F5F5F5);
+    box-sizing: border-box;
+}
+
+.buy-detail-group .summary-text {
+    color: var(--Font-Gray1, #333);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+/* 2. 브랜드 상세 카드 */
+.buy-brand-detail {
+    display: flex;
+    width: 353px;
+    padding: 0 0 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    border-top: 4px solid var(--Brand-NSC, #E2B93B);
+    background: var(--Bg-Write, #FFF);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.20);
+    overflow: hidden;
+}
+
+.buy-brand-header {
+    display: flex;
+    height: 42px;
+    padding: 0 15px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Line-Gray2, #9D9D9D);
+    background: var(--Bg-Gray3, #F5F5F5);
+}
+
+.buy-brand-header .brand-title {
+    color: var(--Font-Black, #1A1A1A);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.buy-brand-row-group {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    gap: 15px;
+    align-self: stretch;
+}
+
+.brand-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border: 1px solid var(--Line-Gray2, #F5F5F5);
+    border-radius: 8px;
+}
+
+.brand-info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    color: var(--Font-Gray1, #555);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 150%;
+    text-align: left;
+}
+
+/* 3. 바우처 카운트 영역 */
+.buy-voucher-count {
+    width: 353px;
+    padding-top: 10px;
+    color: #777;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* 4. 바우처 핀번호 리스트 */
+.buy-voucher-list {
+    display: flex;
+    flex-direction: column;
+    width: 353px;
+    border-top: 1px solid var(--Line-Gray1, #555);
+    background: var(--Bg-Write, #FFF);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.20);
+    box-sizing: border-box;
+}
+
+.list-header {
+    display: flex;
+    width: 100%;
+    height: 42px;
+    padding: 0 4px;
+    align-items: center;
+    box-sizing: border-box;
+    background: var(--Bg-Gray3, #F5F5F5);
+}
+
+.list-row-group {
+    display: flex;
+    width: 100%;
+    height: 42px;
+    padding: 0 4px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.list-row-group {
+    border-top: 1px solid var(--Line-Gray2, #9D9D9D);
+}
+
+.col-no { width: 50px; flex-shrink: 0; text-align: center; font-size: 14px; font-weight: 500; color: #555; }
+.col-pin { flex: 1; text-align: center; font-size: 14px; font-weight: 500; color: #555; }
+.col-status { width: 70px; flex-shrink: 0; text-align: center; font-size: 14px; font-weight: 500; color: #555; }
+
+.list-row-group .col-no, 
+.list-row-group .col-pin, 
+.list-row-group .col-status {
+    font-size: 12px; /* 가이드 4-2-1 반영 */
+}
+
+/* 5. 하단 액션 그룹 */
+.buy-detail-action-group {
+    display: flex;
+    width: 353px;
+    height: 57px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Bg-Gray3, #F5F5F5);
+    box-sizing: border-box;
+}
+
+.btn-detail-back, .btn-detail-excel {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    padding: 5px 7px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.btn-detail-back {
+    border: 1px solid var(--Line-Gray2, #9D9D9D);
+    background: var(--Bg-Write, #FFF);
+    color: var(--Font-Gray1, #555);
+}
+
+.btn-detail-excel {
+    border: 1px solid var(--Line-SC2, #BC9428);
+    background: var(--Brand-NSC, #E2B93B);
+    color: var(--Font-Write, #FFF);
+}

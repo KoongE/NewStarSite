@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새별이앤씨 프로젝트 리뷰 - PC 가이드</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        /* PC 리뷰 페이지 전용 그리드 스타일 */
+        body {
+            background-color: #F8F9FA;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+        .review-container {
+            padding: 60px 20px;
+            max-width: 1100px; /* PC 화면에 적합한 너비 */
+            margin: 0 auto;
+        }
+        .review-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .review-header h1 {
+            font-size: 32px;
+            color: #1A1A1A;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .review-header p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        /* 그리드 시스템: 한 줄에 3개 배치 */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 핵심: 3열 나열 */
+            gap: 25px;
+        }
+
+        .review-card {
+            display: flex;
+            flex-direction: column;
+            background: #FFF;
+            border-radius: 16px;
+            border: 1px solid #EAEAEA;
+            padding: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 호버 시 포인트 컬러 적용 */
+        .review-card:hover {
+            border-color: var(--Brand-NSC, #E2B93B);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(226, 185, 59, 0.15);
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #EEE;
+            transition: background 0.3s;
+        }
+        .review-card:hover::before {
+            background: var(--Brand-NSC, #E2B93B);
+        }
+
+        .page-category {
+            font-size: 12px;
+            color: var(--Brand-NSC, #E2B93B);
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .page-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+
+        .file-name {
+            font-size: 14px;
+            color: #888;
+            font-family: 'Consolas', monospace;
+            background: #F1F1F1;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .view-link {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            color: #444;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .view-link::after {
+            content: '→';
+            margin-left: 8px;
+            transition: transform 0.2s;
+        }
+        .review-card:hover .view-link::after {
+            transform: translateX(5px);
+        }
+
+        /* 반응형: 화면이 작아지면 2개, 더 작아지면 1개로 조정 */
+        @media (max-width: 900px) {
+            .review-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .review-grid { grid-template-columns: 1fr; }
+        }
+
+        .footer-text {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 14px;
+            color: #AAA;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="review-container">
+        <header class="review-header">
+            <h1>NS E&C Project Review</h1>
+            <p>새별이앤씨 퍼블리싱 작업 결과물 리스트</p>
+            <div class="page-underline" style="margin: 20px auto; width: 60px;"></div>
+        </header>
+
+        <div class="review-grid">
+            <a href="index.html" class="review-card">
+                <span class="page-name">메인 페이지</span>
+                <div class="file-info">
+                    <span class="file-name">index.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>
+
+            <a href="login.html" class="review-card">
+                <span class="page-name">로그인</span>
+                <div class="file-info">
+                    <span class="file-name">login.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>
+
+            <a href="login_search.html" class="review-card">
+                <span class="page-name">아이디/비번찾기</span>
+                <div class="file-info">
+                    <span class="file-name">login_search.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>
+
+            <a href="join_agree.html" class="review-card">
+                <span class="page-name">회원가입 동의</span>
+                <div class="file-info">
+                    <span class="file-name">join_agree.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>
+
+            <a href="join_write.html" class="review-card">
+                <span class="page-name">회원가입 작성</span>
+                <div class="file-info">
+                    <span class="file-name">join_write.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>
+            
+            <a href="join_end.html" class="review-card">
+                <span class="page-name">회원가입 완료</span>
+                <div class="file-info">
+                    <span class="file-name">join_end.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>
+
+            <a href="charge.html" class="review-card">
+                <span class="page-name">충전하기</span>
+                <div class="file-info">
+                    <span class="file-name">charge.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>            
+
+            <a href="buy.html" class="review-card">
+                <span class="page-name">상품 상세 및 구매</span>
+                <div class="file-info">
+                    <span class="file-name">buy.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>
+
+            <a href="cart.html" class="review-card">
+                <span class="page-name">장바구니</span>
+                <div class="file-info">
+                    <span class="file-name">cart.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>
+
+            <a href="buy-history.html" class="review-card">
+                <span class="page-name">구매 내역 리스트</span>
+                <div class="file-info">
+                    <span class="file-name">buy-history.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>
+
+            <a href="buy-detail.html" class="review-card">
+                <span class="page-name">구매 상세 정보</span>
+                <div class="file-info">
+                    <span class="file-name">buy-detail.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>
+
+            <a href="board.html" class="review-card">
+                <span class="page-name">게시판</span>
+                <div class="file-info">
+                    <span class="file-name">board.html</span>
+                </div>
+                <span class="view-link">화면 확인하기</span>
+            </a>
+        </div>
+
+        <p class="footer-text">© 2026 새별이앤씨. 본 페이지는 내부 검토용으로 제작되었습니다.</p>
+    </div>
+
+</body>
+</html>
